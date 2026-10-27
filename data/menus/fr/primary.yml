@@ -1,6 +1,15 @@
 ---
 title: Menu principal
 items:
+- title: Fonctionnalités
+  slug: fonctionnalites
+  target: "/fonctionnalites/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/fonctionnalites"
+  file: content/fr/pages/fonctionnalites/_index.html
 - title: L'équipe
   slug: l-equipe
   target: "/personnes/"
@@ -19,14 +28,6 @@ items:
   descendants_targets: []
   path: "/organizations"
   file: content/fr/organizations/_index.html
-- title: Créer un doki
-  slug: creer-un-doki
-  target: https://dokidocs.com/create-instance
-  kind: url
-  new_tab: true
-  children: []
-  descendants_targets: []
-  html_class: menu-class-cta-menu
 - title: Tutoriels
   slug: tutoriels
   target: "/tutoriels/"
@@ -36,6 +37,14 @@ items:
   descendants_targets: []
   path: "/pages/tutoriels"
   file: content/fr/pages/tutoriels/_index.html
+- title: Créer un doki
+  slug: creer-un-doki
+  target: https://dokidocs.com/create-instance
+  kind: url
+  new_tab: true
+  children: []
+  descendants_targets: []
+  html_class: menu-class-cta-menu
 - title: Nous contacter
   slug: nous-contacter
   target: "/nous-contacter/"
