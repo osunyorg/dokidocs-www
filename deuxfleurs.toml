@@ -16,7 +16,7 @@ Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
 from = "/personnes/equipe-editoriale/index.html"
-to = "/equipe/equipe-editoriale/"
+to = "/a-propos/equipe-editoriale/"
 
 [[redirects]]
 from = "/personnes/julien-vey/index.html"
@@ -41,4 +41,8 @@ to = "/a-propos/"
 [[redirects]]
 from = "/personnes/quentin-le-doledec/index.html"
 to = "/a-propos/quentin-le-doledec/"
+
+[[redirects]]
+from = "/equipe/equipe-editoriale/index.html"
+to = "/a-propos/equipe-editoriale/"
 
