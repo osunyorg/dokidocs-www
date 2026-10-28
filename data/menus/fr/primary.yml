@@ -19,6 +19,15 @@ items:
   descendants_targets: []
   path: "/pages/fonctionnalites"
   file: content/fr/pages/fonctionnalites/_index.html
+- title: Tarifs
+  slug: tarifs
+  target: "/tarifs/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/tarifs"
+  file: content/fr/pages/tarifs/_index.html
 - title: Communauté
   slug: communaute
   target: "/organisations/"
@@ -28,6 +37,14 @@ items:
   descendants_targets: []
   path: "/organizations"
   file: content/fr/organizations/_index.html
+- title: Créez votre doki
+  slug: creez-votre-doki
+  target: https://dokidocs.com/create-instance
+  kind: url
+  new_tab: true
+  children: []
+  descendants_targets: []
+  html_class: menu-class-cta-menu
 - title: Tutoriels
   slug: tutoriels
   target: "/tutoriels/"
@@ -37,14 +54,6 @@ items:
   descendants_targets: []
   path: "/pages/tutoriels"
   file: content/fr/pages/tutoriels/_index.html
-- title: Créez votre doki
-  slug: creez-votre-doki
-  target: https://dokidocs.com/create-instance
-  kind: url
-  new_tab: true
-  children: []
-  descendants_targets: []
-  html_class: menu-class-cta-menu
 - title: Contact
   slug: contact
   target: "/nous-contacter/"
