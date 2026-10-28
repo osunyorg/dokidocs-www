@@ -10,8 +10,8 @@ items:
   descendants_targets: []
   path: "/persons"
   file: content/fr/persons/_index.html
-- title: Fonctionnalités
-  slug: fonctionnalites
+- title: Principes et fonctionnalités
+  slug: principes-et-fonctionnalites
   target: "/fonctionnalites/"
   kind: page
   new_tab: false
@@ -37,8 +37,8 @@ items:
   descendants_targets: []
   path: "/pages/tutoriels"
   file: content/fr/pages/tutoriels/_index.html
-- title: Créer un doki
-  slug: creer-un-doki
+- title: Créez votre doki
+  slug: creez-votre-doki
   target: https://dokidocs.com/create-instance
   kind: url
   new_tab: true
