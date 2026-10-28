@@ -7,7 +7,7 @@ params:
     active: true
   logo:
     header: "/assets/images/logo-blanc.svg"
-    footer: ''
+    footer: '/assets/images/logo-pastille.svg'
   home:
     head:
       title: site
