@@ -10,8 +10,8 @@ items:
   descendants_targets: []
   path: "/persons"
   file: content/fr/persons/_index.html
-- title: Principes et fonctionnalités
-  slug: principes-et-fonctionnalites
+- title: Doki, c'est quoi ?
+  slug: doki-c-est-quoi
   target: "/fonctionnalites/"
   kind: page
   new_tab: false
@@ -45,8 +45,8 @@ items:
   children: []
   descendants_targets: []
   html_class: menu-class-cta-menu
-- title: Nous contacter
-  slug: nous-contacter
+- title: Contact
+  slug: contact
   target: "/nous-contacter/"
   kind: page
   new_tab: false
