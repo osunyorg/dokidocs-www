@@ -10,7 +10,7 @@ header_text: >-
 url: "/"
 slug: ""
 date: 2026-06-02T17:29:51+02:00
-lastmod: 2026-10-28T16:05:17+01:00
+lastmod: 2026-10-29T00:47:17+01:00
 meta:
   hugo:
     permalink: "/"
@@ -19,7 +19,7 @@ meta:
     slug: ""
   dates:
     created_at: 2026-06-02T17:29:51+02:00
-    updated_at: 2026-10-28T16:05:17+01:00
+    updated_at: 2026-10-29T00:47:17+01:00
     published_at: 2026-06-02T17:29:51+02:00
 search:
   id: "fe4c2234-38a3-4024-a574-2db4ce6b5beb"
@@ -60,11 +60,11 @@ image:
 children:
   - "persons/_index.html"
   - "pages/fonctionnalites/_index.html"
+  - "pages/tarifs/_index.html"
   - "organizations/_index.html"
-  - "files/_index.html"
   - "pages/tutoriels/_index.html"
   - "pages/nous-contacter/_index.html"
-  - "pages/tarifs/_index.html"
+  - "files/_index.html"
 child_pages:
   - permalink: "/a-propos/"
     path: "/persons"
@@ -74,14 +74,14 @@ child_pages:
     path: "/pages/fonctionnalites"
     slug: "fonctionnalites"
     file: "content/fr/pages/fonctionnalites/_index.html"
+  - permalink: "/tarifs/"
+    path: "/pages/tarifs"
+    slug: "tarifs"
+    file: "content/fr/pages/tarifs/_index.html"
   - permalink: "/organisations/"
     path: "/organizations"
     slug: "organisations"
     file: "content/fr/organizations/_index.html"
-  - permalink: "/fichiers/"
-    path: "/files"
-    slug: "fichiers"
-    file: "content/fr/files/_index.html"
   - permalink: "/tutoriels/"
     path: "/pages/tutoriels"
     slug: "tutoriels"
@@ -90,10 +90,10 @@ child_pages:
     path: "/pages/nous-contacter"
     slug: "nous-contacter"
     file: "content/fr/pages/nous-contacter/_index.html"
-  - permalink: "/tarifs/"
-    path: "/pages/tarifs"
-    slug: "tarifs"
-    file: "content/fr/pages/tarifs/_index.html"
+  - permalink: "/fichiers/"
+    path: "/files"
+    slug: "fichiers"
+    file: "content/fr/files/_index.html"
 meta_description: >-
   Dokidocs est une interface numérique française, souveraine et conviviale de gestion collaborative de projets : agenda, fichiers, actualités, veille… tout est là !
 summary: >-
@@ -110,6 +110,66 @@ contents_reading_time:
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: pages
+
+
+    ranks:
+      base: 2
+      children: 2
+    top:
+      active: false
+
+    data:
+      options:
+        image: true
+        subtitle: true
+        categories: false
+        main_summary: true
+        summary: true
+
+      layout: grid
+      pages:
+        - permalink: "/a-propos/"
+          path: "/persons"
+          slug: "a-propos"
+          file: "content/fr/persons/_index.html"
+          name: >-
+            À propos
+        - permalink: "/fonctionnalites/"
+          path: "/pages/fonctionnalites"
+          slug: "fonctionnalites"
+          file: "content/fr/pages/fonctionnalites/_index.html"
+          name: >-
+            Principes et fonctionnalités
+        - permalink: "/tarifs/"
+          path: "/pages/tarifs"
+          slug: "tarifs"
+          file: "content/fr/pages/tarifs/_index.html"
+          name: >-
+            Tarifs
+        - permalink: "/organisations/"
+          path: "/organizations"
+          slug: "organisations"
+          file: "content/fr/organizations/_index.html"
+          name: >-
+            Organisations
+        - permalink: "/tutoriels/"
+          path: "/pages/tutoriels"
+          slug: "tutoriels"
+          file: "content/fr/pages/tutoriels/_index.html"
+          name: >-
+            Tutoriels
+        - permalink: "/nous-contacter/"
+          path: "/pages/nous-contacter"
+          slug: "nous-contacter"
+          file: "content/fr/pages/nous-contacter/_index.html"
+          name: >-
+            Nous contacter
+
+      quantity: 6
+
+
   - kind: block
     template: testimonials
 
