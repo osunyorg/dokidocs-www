@@ -20,13 +20,25 @@ to = "/equipe/equipe-editoriale/"
 
 [[redirects]]
 from = "/personnes/julien-vey/index.html"
-to = "/equipe/julien-vey/"
+to = "/a-propos/julien-vey/"
+
+[[redirects]]
+from = "/equipe/julien-vey/index.html"
+to = "/a-propos/julien-vey/"
+
+[[redirects]]
+from = "/equipe/index.html"
+to = "/a-propos/"
+
+[[redirects]]
+from = "/equipe/quentin-le-doledec/index.html"
+to = "/a-propos/quentin-le-doledec/"
 
 [[redirects]]
 from = "/personnes/index.html"
-to = "/equipe/"
+to = "/a-propos/"
 
 [[redirects]]
 from = "/personnes/quentin-le-doledec/index.html"
-to = "/equipe/quentin-le-doledec/"
+to = "/a-propos/quentin-le-doledec/"
 
