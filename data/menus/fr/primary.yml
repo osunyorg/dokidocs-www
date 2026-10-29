@@ -10,8 +10,8 @@ items:
   descendants_targets: []
   path: "/persons"
   file: content/fr/persons/_index.html
-- title: Doki, c'est quoi ?
-  slug: doki-c-est-quoi
+- title: Fonctionnalités
+  slug: fonctionnalites
   target: "/fonctionnalites/"
   kind: page
   new_tab: false
