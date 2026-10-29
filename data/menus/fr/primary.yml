@@ -30,7 +30,7 @@ items:
   file: content/fr/pages/tarifs/_index.html
 - title: Communauté
   slug: communaute
-  target: "/organisations/"
+  target: "/dokisphere/"
   kind: page
   new_tab: false
   children: []
