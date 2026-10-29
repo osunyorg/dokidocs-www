@@ -28,15 +28,6 @@ items:
   descendants_targets: []
   path: "/pages/tarifs"
   file: content/fr/pages/tarifs/_index.html
-- title: Communauté
-  slug: communaute
-  target: "/dokisphere/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/organizations"
-  file: content/fr/organizations/_index.html
 - title: Créez votre doki
   slug: creez-votre-doki
   target: https://dokidocs.com/create-instance
@@ -45,8 +36,17 @@ items:
   children: []
   descendants_targets: []
   html_class: menu-class-cta-menu
-- title: Tutoriels
-  slug: tutoriels
+- title: La communauté
+  slug: la-communaute
+  target: "/dokisphere/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/organizations"
+  file: content/fr/organizations/_index.html
+- title: Les tutos
+  slug: les-tutos
   target: "/tutoriels/"
   kind: page
   new_tab: false
