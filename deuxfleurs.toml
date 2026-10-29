@@ -27,6 +27,10 @@ from = "/equipe/julien-vey/index.html"
 to = "/a-propos/julien-vey/"
 
 [[redirects]]
+from = "/organisations/index.html"
+to = "/dokisphere/"
+
+[[redirects]]
 from = "/equipe/index.html"
 to = "/a-propos/"
 
@@ -43,6 +47,14 @@ from = "/personnes/quentin-le-doledec/index.html"
 to = "/a-propos/quentin-le-doledec/"
 
 [[redirects]]
+from = "/clients/index.html"
+to = "/dokisphere/"
+
+[[redirects]]
 from = "/equipe/equipe-editoriale/index.html"
 to = "/a-propos/equipe-editoriale/"
+
+[[redirects]]
+from = "/communaute/index.html"
+to = "/dokisphere/"
 
