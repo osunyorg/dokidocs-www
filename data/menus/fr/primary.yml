@@ -45,15 +45,6 @@ items:
   descendants_targets: []
   path: "/organizations"
   file: content/fr/organizations/_index.html
-- title: Les tutos
-  slug: les-tutos
-  target: "/tutoriels/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/pages/tutoriels"
-  file: content/fr/pages/tutoriels/_index.html
 - title: Contact
   slug: contact
   target: "/nous-contacter/"
