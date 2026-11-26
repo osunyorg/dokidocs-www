@@ -10,7 +10,7 @@ header_text: >-
 url: "/dokisphere/"
 slug: "dokisphere"
 date: 2026-06-02T17:29:52+02:00
-lastmod: 2026-11-26T06:48:54+01:00
+lastmod: 2026-11-26T07:14:03+01:00
 meta:
   hugo:
     permalink: "/dokisphere/"
@@ -19,7 +19,7 @@ meta:
     slug: "dokisphere"
   dates:
     created_at: 2026-06-02T17:29:52+02:00
-    updated_at: 2026-11-26T06:48:54+01:00
+    updated_at: 2026-11-26T07:14:03+01:00
     published_at: 2026-06-02T17:29:52+02:00
 search:
   id: "d8121b2f-c7a7-4b34-a562-29832b2df2d8"
@@ -32,7 +32,7 @@ search:
   summary: >-
     <p>Chaque Doki constitue un fragment d'un réseau unique, la dokisphère : un espace de collaboration et de coopération inter-structures</p>
   body: >-
-    <p>Découvrez la Dokisphère </p>  <p>https://institutd.dokidocs.com/</p>
+    <p>La Dokisphère, c'est quoi ?  <br> Annuaire des dokis  <br> Découvrez la Dokisphère </p>  <p>https://choses-faites.dokidocs.com/</p>  <p>https://citemetrie.dokidocs.com/</p>  <p>https://institutd.dokidocs.com/</p>
 
 breadcrumbs:
   - title: >-
@@ -44,7 +44,7 @@ breadcrumbs:
 design:
   full_width: false
   toc:
-    present: false
+    present: true
     offcanvas: false
 
 
@@ -73,10 +73,50 @@ header_cta:
 section_taxonomies:
 
 contents_reading_time:
-  seconds: 2
+  seconds: 7
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: title
+    title: >-
+      La Dokisphère, c'est quoi ?
+    slug: >-
+      la-dokisphere-c-est-quoi
+    ranks:
+      base: 2
+      self: 2
+    top:
+      active: true
+      title: 
+        value: >-
+          La Dokisphère, c'est quoi ?
+        heading: 2
+
+    data:
+      layout: classic
+
+
+  - kind: block
+    template: title
+    title: >-
+      Annuaire des dokis
+    slug: >-
+      annuaire-des-dokis
+    ranks:
+      base: 2
+      self: 2
+    top:
+      active: true
+      title: 
+        value: >-
+          Annuaire des dokis
+        heading: 2
+
+    data:
+      layout: classic
+
+
   - kind: block
     template: organizations
     title: >-
@@ -84,15 +124,15 @@ contents:
     slug: >-
       decouvrez-la-dokisphere
     ranks:
-      base: 2
-      self: 2
-      children: 3
+      base: 3
+      self: 3
+      children: 4
     top:
       active: true
       title: 
         value: >-
           Découvrez la Dokisphère
-        heading: 2
+        heading: 3
 
     data:
       layout: grid
@@ -100,23 +140,30 @@ contents:
       options:
         link: false
         logo: true
-        summary: false
+        summary: true
         address: false
         filters: false
 
       organizations:
+        - permalink: "/dokisphere/choses-faites/"
+          path: "/organizations/choses-faites"
+          slug: "choses-faites"
+          file: "content/fr/organizations/choses-faites.html"
+          role: >-
+            https://choses-faites.dokidocs.com/
         - permalink: "/dokisphere/citemetrie/"
           path: "/organizations/citemetrie"
           slug: "citemetrie"
           file: "content/fr/organizations/citemetrie.html"
-
+          role: >-
+            https://citemetrie.dokidocs.com/
         - permalink: "/dokisphere/institut-d/"
           path: "/organizations/institut-d"
           slug: "institut-d"
           file: "content/fr/organizations/institut-d.html"
           role: >-
             https://institutd.dokidocs.com/
-      quantity: 2
+      quantity: 3
 
 
 
