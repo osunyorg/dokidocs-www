@@ -35,20 +35,32 @@ jobs:
       - name: Compilation du site
         run: yarn osuny build
 
-      - name: Installation de la clé SSH
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
-
-      - name: Ajout dans les hôtes SSH connus
-        run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
       - name: Déploiement rsync
-        run: rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" ./public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_WORKDIR }}/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_WORKDIR: ${{ secrets.SSH_WORKDIR }}
+          # Clé d'hôte ed25519 du serveur Dokidocs (SHA256:ma5XZ3OKDhJeFy5AMkG1eUb4ffqi/pcToC99a3ffc0M) : fixée ici
+          # plutôt que relue par ssh-keyscan à chaque déploiement
+          SSH_KNOWN_HOST: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK+kZEXwyys82UeaktGTAWiD0LZXz5xEnCIIYDYb0du/'
+        run: |
+          install -d -m 700 ~/.ssh
+          umask 077
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          host="$SSH_HOST"; [ "$SSH_PORT" = 22 ] || host="[$SSH_HOST]:$SSH_PORT"
+          printf '%s %s\n' "$host" "$SSH_KNOWN_HOST" > ~/.ssh/known_hosts
+          rsync -avz --delete \
+            -e "ssh -p $SSH_PORT -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" \
+            ./public/ "$SSH_USER@$SSH_HOST:$SSH_WORKDIR/"
+
+      - name: Suppression de la clé SSH
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
 
       - name: Notification Slack en cas d'échecs
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@06cc13f74fa8d4d2296c09455d91e9453e4025f4 # v2.4.1
         if: failure()
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
