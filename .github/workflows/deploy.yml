@@ -1,0 +1,56 @@
+name: ssh
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: Compilation du site Hugo et déploiement SSH
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
+    steps:
+      - name: Récupération des données
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+
+      - name: Installation de Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          cache: 'yarn'
+
+      - name: Installation des dépendances JavaScript
+        run: yarn install --frozen-lockfile
+
+      - name: Installation de Hugo
+        uses: noesya/actions-hugo@release
+        with:
+          hugo-version: '0.165.0'
+          extended: true
+
+      - name: Compilation du site
+        run: yarn osuny build
+
+      - name: Installation de la clé SSH
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      - name: Ajout dans les hôtes SSH connus
+        run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Déploiement rsync
+        run: rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" ./public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_WORKDIR }}/
+
+      - name: Notification Slack en cas d'échecs
+        uses: rtCamp/action-slack-notify@v2
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_TITLE: 'Problem on repo ${{ github.event.repository.name }}'
+          SLACK_COLOR: '#FF0000'
