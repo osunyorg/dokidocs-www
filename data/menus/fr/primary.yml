@@ -28,16 +28,16 @@ items:
   descendants_targets: []
   path: "/pages/tarifs"
   file: content/fr/pages/tarifs/_index.html
-- title: Créez votre doki
-  slug: creez-votre-doki
+- title: Créez mon Doki
+  slug: creez-mon-doki
   target: https://dokidocs.com/create-instance
   kind: url
   new_tab: true
   children: []
   descendants_targets: []
   html_class: menu-class-cta-menu
-- title: La communauté
-  slug: la-communaute
+- title: Dokisphère
+  slug: dokisphere
   target: "/dokisphere/"
   kind: page
   new_tab: false
