@@ -10,7 +10,7 @@ header_text: >-
 url: "/nous-contacter/"
 slug: "nous-contacter"
 date: 2026-10-26T15:55:13+01:00
-lastmod: 2026-11-26T07:11:55+01:00
+lastmod: 2026-11-27T07:45:24+01:00
 meta:
   hugo:
     permalink: "/nous-contacter/"
@@ -19,7 +19,7 @@ meta:
     slug: "nous-contacter"
   dates:
     created_at: 2026-10-26T15:55:13+01:00
-    updated_at: 2026-11-26T07:11:55+01:00
+    updated_at: 2026-11-27T07:45:24+01:00
     published_at: 2026-10-26T15:55:13+01:00
 search:
   id: "1ef6e874-825c-4d8f-a903-dcfd15fe81a7"
@@ -30,9 +30,9 @@ search:
   title: >-
     Nous contacter
   summary: >-
-    <p>Une toute petite équipe, mais une grand écoute ! On répond à vos questions et vos besoins sans IA et sans tickets.</p>
+    <p>Une toute petite équipe, mais une grande écoute ! On répond à vos questions et vos besoins, sans IA et sans tickets.</p>
   body: >-
-    <p>Contacter l'équipe de Dokidocs  <br>  https://tally.so/r/BEEgZA <br>Nous contacter <br>   <br>Dokidocs</p>  <p>35400 <br>Saint-Malo <br>France <br>https://dokidocs.com</p>  <p>https://www.linkedin.com/company/11086064/admin/dashboard/</p>  <p>Du lundi au vendredi</p>
+    <p>Contacter l'équipe de Dokidocs  <br>  </p>  <p>À votre écoute !</p>  <p>   <br>Dokidocs</p>  <p>35400 <br>Saint-Malo <br>France <br>https://dokidocs.com</p>  <p>https://www.linkedin.com/company/11086064/admin/dashboard/</p>  <p>Du lundi au vendredi</p>
 
 breadcrumbs:
   - title: >-
@@ -60,14 +60,14 @@ image:
 
 
 meta_description: >-
-  Une toute petite équipe, mais une grand écoute ! On répond à vos questions et vos besoins sans IA et sans tickets.
+  Une toute petite équipe, mais une grande écoute ! On répond à vos questions et vos besoins sans IA et sans tickets.
 summary: >-
-  <p>Une toute petite équipe, mais une grand écoute ! On répond à vos questions et vos besoins sans IA et sans tickets.</p>
+  <p>Une toute petite équipe, mais une grande écoute ! On répond à vos questions et vos besoins, sans IA et sans tickets.</p>
 header_cta:
 
 
 contents_reading_time:
-  seconds: 8
+  seconds: 7
   text: >-
     moins d'une minute
 contents:
@@ -92,26 +92,32 @@ contents:
 
 
   - kind: block
-    template: form
+    template: persons
 
 
     ranks:
       base: 3
+      children: 3
     top:
       active: false
 
     data:
-      url: >-
-        https://tally.so/r/BEEgZA
-      form_title: >-
-        Nous contacter
-      form: 
-        platform: "tally"
-        identifier: "BEEgZA"
-        iframe: >-
-          <iframe data-tally-src="https://tally.so/embed/BEEgZA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Nous contacter"></iframe>
-        script: >-
-          <script src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
+
+      layout: grid
+      options:
+        image: true
+        summary: true
+        link: true
+        contact: true
+
+      persons:
+        - permalink: "/a-propos/julien-vey/"
+          path: "/persons/julien-vey"
+          slug: "julien-vey"
+          file: "content/fr/persons/julien-vey.html"
+          role: >-
+            À votre écoute !
+      quantity: 1
 
 
   - kind: block
